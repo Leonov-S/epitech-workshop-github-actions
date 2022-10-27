@@ -1,0 +1,32 @@
+name: Date
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - closed
+
+  pull_request:
+    types: ["ready_for_review"]
+  gollum:
+    types:
+      - created
+      - edited
+      - deleted
+  schedule:
+    - cron: '1 0 1 * *'
+    
+  workflow_dispatch:
+    
+jobs:
+  hello_date:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: helloWorldDate
+        run: | 
+          echo Hello, world! Today is 
+          echo "$(date +'%m-%d-%Y')"
+    
+    
