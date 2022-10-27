@@ -26,8 +26,6 @@ jobs:
     steps:
       - name: helloWorldDate
         run: | 
-          echo Hello, world! Today is 
-          echo "$(date +'%m-%d-%Y')"
-          echo "$(date + '%H:%M:%S')"
+          echo Hello, world! Today is $(date +'%m-%d-%Y') $(date +%H):$(date + %M):$(date + %S)"
     
     
