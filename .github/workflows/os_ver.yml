@@ -7,13 +7,13 @@ jobs:
   unbuntu:
     runs-on: ubuntu-latest
     steps:
-      - run: echo lsb_release
+      - run: lsb_release
   macos:
     runs-on: macos-latest
     steps:
-      - run: echo sw_vers -productVersion
+      - run: sw_vers -productVersion
   windows:
     runs-on: windows-latest
     steps:
-      - run: echo Get-ComputerInfo
+      - run: Get-ComputerInfo
       
